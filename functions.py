@@ -114,8 +114,54 @@ def isPandigital(number):
     else:
         return False
 
+#Linked Lists ya know (idk I'll just figure this bit out later)
+class Node(object):
+
+    def __init__(self, data=None, next_node=None):
+        self.data = data
+        self.next_node = next_node
+
+    def get_data(self):
+        return self.data
+
+    def get_next(self):
+        return self.next_node
+
+    def set_next(self, new_next):
+        self.next_node = new_next
+
+#Returns boolean value whether two strings are anagrams or not
+def isAnagram(firstString, secondString):
+    condition = True
+    if len(firstString) != len(secondString):
+        return False
+
+    else:
+        for b in firstString:
+            if b not in secondString:
+                return False
+
+    return True
+
+
+#gives you zigzag array
+def swap(arr,i,j):
+    arr[i],arr[j] = arr[j],arr[i]
+def zigZag(arr):
+    n = len(arr)
+    for i in range(len(arr)-1):
+        if not i&1:
+            if arr[i] > arr[i+1]:
+                swap(arr,i,i+1)
+        elif arr[i] < arr[i+1]:
+            swap(arr,i,i+1)
+    return arr
 
 #Still needed:
 #-Fastest Route algo
 #-Grid algorithm, (returns cartesian plane co-ords upto x, y)
-#-/shrug
+#-Prime Factorizatoin
+#-Summend Partitions
+#-Greedy Algo's for paths
+#-learn what the fuck recursive is
+
