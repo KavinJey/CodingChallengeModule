@@ -144,18 +144,56 @@ def isAnagram(firstString, secondString):
     return True
 
 
-#gives you zigzag array
+#swaps two elements in a given array
 def swap(arr,i,j):
     arr[i],arr[j] = arr[j],arr[i]
+
+#gives you zigzag array
 def zigZag(arr):
+
     n = len(arr)
     for i in range(len(arr)-1):
         if not i&1:
             if arr[i] > arr[i+1]:
+
+                #functions that swaps two items in an array
                 swap(arr,i,i+1)
         elif arr[i] < arr[i+1]:
             swap(arr,i,i+1)
     return arr
+
+#RETURNS SUM OF DIAGONALS OF A GIVEN 2DARRAY
+def diagonalSum(array):
+    sizeArray = len(array[0])
+    leftDiagonal = 0
+    rightDiagonal = 0
+
+    for x in range(sizeArray):
+        leftDiagonal += array[x][x]
+        rightDiagonal += array[x][sizeArray-1-x]
+
+    return(leftDiagonal+rightDiagonal)
+
+def diagonalDiff(array):
+    def diagonalSum(array):
+        sizeArray = len(array[0])
+        leftDiagonal = 0
+        rightDiagonal = 0
+
+        for x in range(sizeArray):
+            leftDiagonal += array[x][x]
+            rightDiagonal += array[x][sizeArray - 1 - x]
+
+        return (abs(leftDiagonal - rightDiagonal))
+
+#Greatest Common Divisor tool is in standard library
+#Just use gcd(x,y) and it returns gcd
+#lowest common multiple however
+def lcm(a, b):
+    """Compute the lowest common multiple of a and b"""
+    return a * b / gcd(a, b)
+
+
 
 #Still needed:
 #-Fastest Route algo
