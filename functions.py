@@ -33,11 +33,10 @@ def primeGenerator(n):
     return array
 
 #Prime checker
-#CHECK IF THIS IS EFFICIENT !!!
 def isPrime(number):
 
     #does a loop from 2 to number and checks for mod
-    for x in range(2, number):
+    for x in range(2, number//2):
         remainder = number % x
 
         #returns False as soon as divisor is found
@@ -46,6 +45,24 @@ def isPrime(number):
 
     #returns True if there is no divisor
     return True
+
+#Prime Factorization
+def findPrimes(n):
+    listPrimes = []
+    while (n%2 == 0):
+        listPrimes.append(2)
+        n = n/ 2
+
+    for x in range(3, int(sqrt(n))+1, 2):
+        while (n%x == 0):
+            listPrimes.append(int(x))
+            n = n / x
+
+    if (n > 2):
+        listPrimes.append(int(n))
+
+
+    return listPrimes
 
 #Perfect Divisor Generator
 #NEED TO FIND NUMBERS THAT CANNOT BE THE SUM OF TWO ABUNDANT NUMBERS
@@ -143,8 +160,8 @@ def isAnagram(firstString, secondString):
 
     return True
 
-
 #swaps two elements in a given array
+#needs arr arguements as well as two indexes
 def swap(arr,i,j):
     arr[i],arr[j] = arr[j],arr[i]
 
@@ -193,12 +210,29 @@ def lcm(a, b):
     """Compute the lowest common multiple of a and b"""
     return a * b / gcd(a, b)
 
+#returns 2d array with co-ords up to limit of x, y
+def grid(x, y):
+    arr = []
+    for x in range(x+1):
+        for b in range(y+1):
+            point = [x, b]
+            arr.append(point)
+
+    return arr
+
+def palindrome(num):
+    if num[::-1] == num:
+        return True
+
+    else:
+        return False
+
+
 
 
 #Still needed:
 #-Fastest Route algo
 #-Grid algorithm, (returns cartesian plane co-ords upto x, y)
-#-Prime Factorizatoin
 #-Summend Partitions
 #-Greedy Algo's for paths
 #-learn what the fuck recursive is
