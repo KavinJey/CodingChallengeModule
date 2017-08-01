@@ -228,6 +228,22 @@ def palindrome(num):
         return False
 
 
+#Prints possibility of sets that create the target
+#Takes numbers as a list, targer as an integer
+#Finessed from: https://stackoverflow.com/questions/4632322/finding-all-possible-combinations-of-numbers-to-reach-a-given-sum
+def subset_sum(numbers, target, partial=[]):
+    s = sum(partial)
+
+    # check if the partial sum is equals to target
+    if s == target:
+        print "sum(%s)=%s" % (partial, target)
+    if s >= target:
+        return  # if we reach the number why bother to continue
+
+    for i in range(len(numbers)):
+        n = numbers[i]
+        remaining = numbers[i+1:]
+        subset_sum(remaining, target, partial + [n])
 
 
 #Still needed:
@@ -236,4 +252,3 @@ def palindrome(num):
 #-Summend Partitions
 #-Greedy Algo's for paths
 #-learn what the fuck recursive is
-
