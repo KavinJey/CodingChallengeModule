@@ -220,7 +220,11 @@ def grid(x, y):
 
     return arr
 
+<<<<<<< Updated upstream
 
+=======
+#Checking if number is palindrome
+>>>>>>> Stashed changes
 def isPalindrome(num):
     if num[::-1] == num:
         return True
@@ -229,6 +233,7 @@ def isPalindrome(num):
         return False
 
 
+<<<<<<< Updated upstream
 #Prints possibility of sets that create the target
 #Takes numbers as a list, targer as an integer
 #Finessed from: https://stackoverflow.com/questions/4632322/finding-all-possible-combinations-of-numbers-to-reach-a-given-sum
@@ -328,6 +333,8 @@ print(visited)
 
 
 
+=======
+>>>>>>> Stashed changes
 #Still needed:
 #-Fastest Route algo
 #-Grid algorithm, (returns cartesian plane co-ords upto x, y)
