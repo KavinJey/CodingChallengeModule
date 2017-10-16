@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/CodingChallengeModule.iml" filepath="$PROJECT_DIR$/.idea/CodingChallengeModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaVersion/JavaVersion.iml" filepath="$PROJECT_DIR$/JavaVersion/JavaVersion.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaVersion/JavaVersion_2.iml" filepath="$PROJECT_DIR$/JavaVersion/JavaVersion_2.iml" />
+=======
+<<<<<<< HEAD
+      <module fileurl="file://$PROJECT_DIR$/CodingChallengeModule.iml" filepath="$PROJECT_DIR$/CodingChallengeModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaVersion/JavaVersion.iml" filepath="$PROJECT_DIR$/JavaVersion/JavaVersion.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/PythonVersion/.idea/CodingChallengeModule.iml" filepath="$PROJECT_DIR$/PythonVersion/.idea/CodingChallengeModule.iml" />
+>>>>>>> 0205ecefd275227e3c5ccab1d375cf45ab810659
+>>>>>>> cbf5fbaf224db6ad5133825fbebdc44c57b053e2
     </modules>
   </component>
 </project>
